@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "pG1x5ZFmSPLt4FCjgxpSA0McP5hG1fsIz06Qlv/VMu4ayeTYQYPITO/1CJdOI76iCilvv6m2ybWw1gt3VmkxtQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\HP\\Documents\\ProgramacionWebParcial2\\Datos\\Datos.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\HP\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
