@@ -1,11 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "J+0zzIItXJIdOHhOkm7apm+Nf10Tm6uonzaWSfo43wxQzpkKHdcL/FdTb9SVsYJgMrYqZoBypwc7LE4TjXDEqQ==",
+  "dgSpecHash": "0O8FC8q0PH1hfUEyyhG5/bqW3wVzA2MYA+RkOep0Ad+lV95PDUePGFoAd2nhLNohqJsGqxpyvrFNfqitUJa9EA==",
   "success": true,
   "projectFilePath": "C:\\Users\\HP\\Documents\\ProgramacionWebParcial2\\Entidad\\Entidad.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\HP\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\HP\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Users\\HP\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512"
   ],
   "logs": []
 }

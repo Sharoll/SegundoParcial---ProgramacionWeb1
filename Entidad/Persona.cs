@@ -1,16 +1,35 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Entidad
 {
     public class Persona
     {
+        [Key]
+        
+        [Column(TypeName = "varchar(10)")]
         public string TipoDocumento {get;set;}
-        public string Identificacion {get;set}
+
+        [Column(TypeName = "varchar(15)")]
+        public string Identificacion {get;set;}
+
+        [Column(TypeName = "varchar(20)")]
         public string Nombre {get;set;}
+
+        [Column(TypeName = "varchar(20)")]
         public string Direccion {get;set;}
+
+        [Column(TypeName = "varchar(15)")]
         public string Telefono {get;set;}
-        public string Pais{get;set}
+
+        [Column(TypeName = "varchar(20)")]
+        public string Pais{get;set;}
+
+        [Column(TypeName = "varchar(20)")]
         public string Departamento {get;set;}
+
+        [Column(TypeName = "varchar(20)")]
         public string Ciudad {get;set;}
     }
 }
