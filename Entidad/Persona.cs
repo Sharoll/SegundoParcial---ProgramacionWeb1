@@ -1,4 +1,6 @@
 ﻿using System;
+using System.IO;
+using System.Security.AccessControl;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -6,11 +8,10 @@ namespace Entidad
 {
     public class Persona
     {
-        [Key]
-        
         [Column(TypeName = "varchar(10)")]
         public string TipoDocumento {get;set;}
 
+        [Key]
         [Column(TypeName = "varchar(15)")]
         public string Identificacion {get;set;}
 

@@ -42,14 +42,14 @@ namespace segundoparcial.Controllers
         private Persona MapearPersona(PersonaInputModel personaInput){
             var persona = new Persona();
             
-                persona.TipoDocumento = personaInput.TipoDocumento;
-                persona.Identificacion = personaInput.Identificacion;
-                persona.Nombre = personaInput.Nombre;
-                persona.Direccion = personaInput.Direccion;
-                persona.Telefono = persona.Telefono;
-                persona.Pais = personaInput.Pais;
-                persona.Departamento = personaInput.Departamento;
-                persona.Ciudad = personaInput.Ciudad;
+                persona.TipoDocumento = personaInput.tipoDocumento;
+                persona.Identificacion = personaInput.identificacion;
+                persona.Nombre = personaInput.nombre;
+                persona.Direccion = personaInput.direccion;
+                persona.Telefono = personaInput.telefono;
+                persona.Pais = personaInput.pais;
+                persona.Departamento = personaInput.departamento;
+                persona.Ciudad = personaInput.ciudad;
                 return persona;
         }
      }

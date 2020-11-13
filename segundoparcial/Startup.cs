@@ -1,4 +1,5 @@
 using Datos;
+using System;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -7,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.OpenApi.Models;
 
 namespace segundoparcial
 {
@@ -25,9 +27,32 @@ namespace segundoparcial
             // Configurar cadena de Conexion con EF
             var connectionString=Configuration.GetConnectionString("DefaultConnection");
             services.AddDbContext<PersonaContext>(p=>p.UseSqlServer(connectionString));
-
             services.AddControllersWithViews();
+
             // In production, the Angular files will be served from this directory
+
+            //Agregar OpenApi Swagger
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Version = "v1",
+                    Title = "Segundo Parcial Git",
+                    Description = "Parcialdotnet Git API - ASP.NET Core Web API",
+                    TermsOfService = new Uri("https://cla.dotnetfoundation.org/"),
+                    Contact = new OpenApiContact
+                    {
+                        Name = "Sharoll Araujo Velásquez",
+                        Email = string.Empty,
+                        Url = new Uri("https://github.com/Sharoll/EjercicioParcial"),
+                    },
+                    License = new OpenApiLicense
+                    {
+                        Name = "Licencia dotnet foundation",
+                        Url = new Uri("https://www.byasystems.co/license"),
+                    }
+                });
+            });
             services.AddSpaStaticFiles(configuration =>
             {
                 configuration.RootPath = "ClientApp/dist";
@@ -63,6 +88,14 @@ namespace segundoparcial
                     name: "default",
                     pattern: "{controller}/{action=Index}/{id?}");
             });
+
+            //start swagger
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+            });
+            //end swagger
 
             app.UseSpa(spa =>
             {
