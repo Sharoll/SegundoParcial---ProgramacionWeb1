@@ -1,18 +1,47 @@
-a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+body{
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  
 }
 
-html {
-  font-size: 14px;
-}
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+.Sidebar{
+  background:  #0abaf5;
+  margin-top: 80px;
+  padding: 30px;
+  position: fixed;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  z-index: 100;
 }
 
-.box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+.Sidebar .profile_image{
+  border-radius: 100px;
+  margin-bottom: 100px;
+}
+
+.Sidebar h4{
+  color: #ccc;
+  margin-top: -30%;
+  margin-bottom: 10px;
+}
+
+.Sidebar a{
+  color: #fff;
+  display: block;
+  width: 100%;
+  line-height: 60px;
+  text-decoration: none;
+  padding-left: 40px;
+  box-sizing: border-box;
+  transition: 0.5s;
+  transition-property:background;
+}
+
+.Sidebar a:hover{
+  background:  #1837e5;
+}
+.Sidebar i{
+  padding-right: 10px;
 }
