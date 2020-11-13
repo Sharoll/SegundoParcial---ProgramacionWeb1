@@ -1,1 +1,76 @@
-<p>persona-registro works!</p>
+<div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h2>Registro de Terceros</h2>
+                <form [formGroup]="formGroup">
+                    
+                    <div class="form-group">
+                        <label>Tipo Documento</label>
+                        <input type="text"  name="tipoDocumento" formControlName="tipoDocumento"  class="form-control" />
+                    </div>              
+                    <div class="form-group">
+                        <label>Identificacion</label>
+                        <input type="text"  name="identificacion" formControlName="identificacion"  class="form-control" />
+                    </div>
+                    <div class="form-group">
+                            <label>Nombre</label>
+                            <input type="text"  name="nombre" formControlName="nombre"  class="form-control"
+                            [ngClass]="{ 'is-invalid':  control.nombre.errors}" />
+
+                             <div *ngIf="control.nombre.errors" class="invalid-feedback">
+                             <div *ngIf="control.nombre.errors.required">Se require el nombre</div>
+                             </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Direccion</label>
+                            <input type="text"  name="direccion" formControlName="direccion" class="form-control"
+                            [ngClass]="{ 'is-invalid':  control.direccion.errors}" />
+                
+                            <div *ngIf="control.direccion.errors" class="invalid-feedback">
+                            <div *ngIf="control.direccion.errors.required">Se require el nombre</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Telefono</label>
+                            <input type="text"  name="telefono" formControlName="telefono" class="form-control"
+                            [ngClass]="{ 'is-invalid':  control.telefono.errors}" />
+                
+                            <div *ngIf="control.telefono.errors" class="invalid-feedback">
+                            <div *ngIf="control.telefono.errors.required">Se require el nombre</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Pais</label>
+                            <input type="text"  name="pais" formControlName="pais" class="form-control"
+                            [ngClass]="{ 'is-invalid':  control.pais.errors}" />
+                
+                            <div *ngIf="control.pais.errors" class="invalid-feedback">
+                            <div *ngIf="control.pais.errors.required">Se require el nombre</div>
+                            </div>
+                        </div>
+                    <div class="form-group">
+                            <label>Departamento</label>
+                            <input type="text"  name="departamento"  formControlName="departamento" class="form-control"
+                                [ngClass]="{ 'is-invalid':  control.departamento.errors}" />
+
+                                <div *ngIf="control.departamento.errors" class="invalid-feedback">
+                                    <div *ngIf="control.departamento.errors.required">Se require el nombre</div>
+                                    </div>
+                     </div>
+                    <div class="form-group">
+                                <label>Ciudad</label>
+                                <input type="text"  name="ciudad" formControlName="ciudad" class="form-control"
+                                    [ngClass]="{ 'is-invalid':  control.ciudad.errors}" />
+
+                                    <div *ngIf="control.ciudad.errors" class="invalid-feedback">
+                                        <div *ngIf="control.ciudad.errors.required">Se require el nombre</div>
+                                        </div>
+                     </div>                   
+                    <div class="text-center">
+                        <button class="btn btn-primary mr-1"(click)="onSubmit()"[disabled]="formGroup.invalid">Registrar</button>
+                        <button class="btn btn-secondary" type="reset">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>

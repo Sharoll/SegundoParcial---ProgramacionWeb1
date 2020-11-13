@@ -37,14 +37,14 @@ namespace segundoparcial
                 c.SwaggerDoc("v1", new OpenApiInfo
                 {
                     Version = "v1",
-                    Title = "Segundo Parcial Git",
-                    Description = "Parcialdotnet Git API - ASP.NET Core Web API",
+                    Title = "School API",
+                    Description = "School API - ASP.NET Core Web API",
                     TermsOfService = new Uri("https://cla.dotnetfoundation.org/"),
                     Contact = new OpenApiContact
                     {
-                        Name = "Sharoll Araujo Velásquez",
+                        Name = "Unicesar",
                         Email = string.Empty,
-                        Url = new Uri("https://github.com/Sharoll/EjercicioParcial"),
+                        Url = new Uri("https://github.com/borisgr04/CrudNgDotNetCore3"),
                     },
                     License = new OpenApiLicense
                     {

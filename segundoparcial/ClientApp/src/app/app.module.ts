@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
@@ -12,6 +12,9 @@ import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { PersonaConsultaComponent } from './gastosDiarios/persona-consulta/persona-consulta.component';
 import { PersonaRegistroComponent } from './gastosDiarios/persona-registro/persona-registro.component';
 import { AppRoutingModule } from './app-routing.module';
+import { FooterComponent } from './gastosDiarios/footer/footer.component';
+import { HeaderComponent } from './gastosDiarios/header/header.component';
+import { PersonaService } from './services/persona.service';
 
 @NgModule({
   declarations: [
@@ -21,9 +24,12 @@ import { AppRoutingModule } from './app-routing.module';
     CounterComponent,
     FetchDataComponent,
     PersonaConsultaComponent,
-    PersonaRegistroComponent
+    PersonaRegistroComponent,
+    FooterComponent,
+    HeaderComponent
   ],
   imports: [
+    ReactiveFormsModule,
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
     FormsModule,
@@ -34,7 +40,7 @@ import { AppRoutingModule } from './app-routing.module';
 ], { relativeLinkResolution: 'legacy' }),
     AppRoutingModule
   ],
-  providers: [],
+  providers: [PersonaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -3,14 +3,14 @@ using Entidad;
 namespace segundoparcial.Models
 {
     public class PersonaInputModel{
-        public string tipoDocumento {get;set;}
-        public string identificacion {get;set;}
-        public string nombre {get;set;}
-        public string direccion {get;set;}
-        public string telefono {get;set;}
-        public string pais {get;set;}
-        public string departamento {get;set;}
-        public string ciudad {get;set;}
+        public string TipoDocumento {get;set;}
+        public string Identificacion {get;set;}
+        public string Nombre {get;set;}
+        public string Direccion {get;set;}
+        public string Telefono {get;set;}
+        public string Pais {get;set;}
+        public string Departamento {get;set;}
+        public string Ciudad {get;set;}
     }
 
     
@@ -22,14 +22,14 @@ namespace segundoparcial.Models
         }
         public PersonaViewModel(Persona persona)
         {
-            tipoDocumento = persona.TipoDocumento;
-            identificacion = persona.Identificacion;
-            nombre = persona.Nombre;
-            direccion = persona.Direccion;
-            telefono = persona.Telefono;
-            pais = persona.Pais;
-            departamento = persona.Departamento;
-            ciudad = persona.Ciudad;
+            TipoDocumento = persona.TipoDocumento;
+            Identificacion = persona.Identificacion;
+            Nombre = persona.Nombre;
+            Direccion = persona.Direccion;
+            Telefono = persona.Telefono;
+            Pais = persona.Pais;
+            Departamento = persona.Departamento;
+            Ciudad = persona.Ciudad;
             
         }
     }

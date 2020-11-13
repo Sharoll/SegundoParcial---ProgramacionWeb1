@@ -13,6 +13,15 @@ const routes: Routes = [
   path: 'personaRegistro',
   component: PersonaRegistroComponent
   }
+  /* {
+  path: 'pagoRegistro',
+  component: PagoRegistroComponent
+  },
+  {
+  path: 'pagoConsulta',
+  component: PagoConsultaComponent
+  } */
+  
   ];
   
 

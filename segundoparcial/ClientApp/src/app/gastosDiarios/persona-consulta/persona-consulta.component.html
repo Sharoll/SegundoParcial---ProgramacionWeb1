@@ -1,1 +1,41 @@
-<p>persona-consulta works!</p>
+<div class="row">
+        <div class="col-6">
+          <input [(ngModel)]="searchText" type="text" class="form-control" placeholder="Type to filter">
+        </div>
+      </div>
+      <hr>
+          <table class ="table table-striped" *ngIf='personas && personas.length'>
+            <thead>
+              <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">TipoDocumento </th>
+                    <th scope="col">Identificación </th>
+                    <th scope="col">Nombre </th>
+                    <th scope="col">Direccion </th>
+                    <th scope="col">Telefono </th>
+                    <th scope="col">Pais </th>
+                    <th scope="col">Departamento </th>
+                    <th scope="col">Ciudad </th>
+            </tr>
+            </thead>
+    
+            <tbody>
+              <tr *ngFor="let persona of personas ; index as i ">
+                    <th scope="row">{{ i + 1 }}</th>
+                    <td>{{ persona.tipoDocumento }}</td>
+                    <td>{{ persona.identificacion }}</td>
+                    <td>{{ persona.nombre }}</td>
+                    <td>{{ persona.direccion }}</td>
+                    <td>{{ persona.telefono }}</td>
+                    <td>{{persona.pais}}</td>
+                    <td>{{persona.departamento}}</td>
+                    <td>{{persona.ciudad}}</td>
+                    <!-- <td>{{persona.pago.codPersona}}</td>
+                    <td>{{ persona.pago.codPago }}</td>
+                    <td>{{ persona.pago.tipoPago }}</td>
+                    <td>{{ persona.pago.fechaPago }}</td>
+                    <td>{{ persona.pago.valorPago|currency:'COP':true}}</td>
+                    <td>{{ persona.pago.valorIvaPago|currency:'COP':true}}</td>  -->      
+          </tr>
+        </tbody>
+    </table>

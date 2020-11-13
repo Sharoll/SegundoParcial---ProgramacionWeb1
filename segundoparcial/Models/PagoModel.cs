@@ -5,12 +5,12 @@ namespace segundoparcial.Models
 {
     public class PagoInputModel{
 
-        public string codPago {get;set;}
-        public string codPersona {get;set;}  
-        public string tipoPago {get;set;}
-        public DateTime fechaPago {get;set;}
-        public decimal valorPago {get;set;}
-        public decimal valorIvaPago {get;set;}
+        public string CodPago {get;set;}
+        public string CodPersona {get;set;}  
+        public string TipoPago {get;set;}
+        public DateTime FechaPago {get;set;}
+        public decimal ValorPago {get;set;}
+        public decimal ValorIvaPago {get;set;}
         
     }
 
@@ -22,12 +22,12 @@ namespace segundoparcial.Models
         }
         public PagoViewModel(Pago pago)
         {
-            codPago = pago.CodPago;
-            codPersona = pago.CodPersona;
-            tipoPago = pago.TipoPago;
-            fechaPago = pago.FechaPago;
-            valorPago = pago.ValorPago;
-            valorIvaPago = pago.ValorIvaPago;
+            CodPago = pago.CodPago;
+            CodPersona = pago.CodPersona;
+            TipoPago = pago.TipoPago;
+            FechaPago = pago.FechaPago;
+            ValorPago = pago.ValorPago;
+            ValorIvaPago = pago.ValorIvaPago;
             
         }
     }
